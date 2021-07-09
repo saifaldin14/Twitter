@@ -8,9 +8,9 @@ export type TweetProps = {
   tweet: TweetType;
 };
 
-const Tweet = (props: TweetProps) => (
+const Tweet = ({ tweet }: TweetProps) => (
   <View>
-    <LeftContainer />
+    <LeftContainer user={tweet.user} />
     <MainContainer />
   </View>
 );

@@ -1,12 +1,15 @@
 import React from "react";
 import { View } from "react-native";
+import { UserType } from "../../../types";
+import ProfilePicture from "../../ProfilePicture";
 
-export type LeftContainerProps = {};
+export type LeftContainerProps = {
+  user: UserType;
+};
 
-const LeftContainer = (props: LeftContainerProps) => (
+const LeftContainer = ({ user }: LeftContainerProps) => (
   <View>
-    {/*  Profile Picture  */}
-    {/*  Do other stuff  */}
+    <ProfilePicture image={user.image} size={75} />
   </View>
 );
 
