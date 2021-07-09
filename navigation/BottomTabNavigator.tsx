@@ -10,7 +10,7 @@ import * as React from "react";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
-import TabOneScreen from "../screens/TabOneScreen";
+import HomeScreen from "../screens/HomeScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
 import ProfilePicture from "../components/ProfilePicture";
 import {
@@ -90,13 +90,13 @@ function HomeNavigator() {
     <HomeStack.Navigator>
       <HomeStack.Screen
         name="HomeScreen"
-        component={TabOneScreen}
+        component={HomeScreen}
         options={{
           headerRightContainerStyle: {
-            marginRight: 10,
+            marginRight: 15,
           },
           headerLeftContainerStyle: {
-            marginLeft: 10,
+            marginLeft: 15,
           },
           headerTitle: () => (
             <Ionicons name="logo-twitter" size={30} color={Colors.light.tint} />
