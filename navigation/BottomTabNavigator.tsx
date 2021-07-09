@@ -12,6 +12,7 @@ import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
 import TabOneScreen from "../screens/TabOneScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
+import ProfilePicture from "../components/ProfilePicture";
 import {
   BottomTabParamList,
   HomeNavigatorParamList,
@@ -94,6 +95,9 @@ function HomeNavigator() {
           headerRightContainerStyle: {
             marginRight: 10,
           },
+          headerLeftContainerStyle: {
+            marginLeft: 10,
+          },
           headerTitle: () => (
             <Ionicons name="logo-twitter" size={30} color={Colors.light.tint} />
           ),
@@ -102,6 +106,14 @@ function HomeNavigator() {
               name="star-four-points-outline"
               size={30}
               color={Colors.light.tint}
+            />
+          ),
+          headerLeft: () => (
+            <ProfilePicture
+              size={40}
+              image={
+                "https://upload.wikimedia.org/wikipedia/commons/1/19/Águila_calva.jpg"
+              }
             />
           ),
         }}
