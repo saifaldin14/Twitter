@@ -1,13 +1,22 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
+import { TweetType } from "../../../types";
 
-export type MainContainerProps = {};
+export type MainContainerProps = {
+  tweet: TweetType;
+};
 
-const MainContainer = (props: MainContainerProps) => (
+const MainContainer = ({ tweet }: MainContainerProps) => (
   <View>
-    <Text>Hello World</Text>
-    {/*  Username  */}
-    {/*  Content  */}
+    <View>
+      <Text>{tweet.user.name}</Text>
+      <Text>{tweet.user.username}</Text>
+      <Text>{tweet.createdAt}</Text>
+    </View>
+    <View>
+      <Text>{tweet.content}</Text>
+      {!tweet.image && <Image source={{ uri: tweet.image }} />}
+    </View>
     {/*  Tweet Footer  */}
   </View>
 );
