@@ -1,8 +1,12 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  headerContainer: {
+  container: {
     flex: 1,
+    marginHorizontal: 10,
+  },
+  headerContainer: {
+    // flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
   },
@@ -10,19 +14,28 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   name: {
-    marginHorizontal: 5,
+    marginRight: 5,
     fontWeight: "bold",
   },
   username: {
-    marginHorizontal: 5,
+    marginRight: 5,
     color: "grey",
   },
   createdAt: {
-    marginHorizontal: 5,
+    marginRight: 5,
     color: "grey",
   },
-  moreIcon: {
-    justifyContent: "flex-end",
+  content: {
+    marginTop: 5,
+    lineHeight: 18,
+  },
+  image: {
+    marginVertical: 10,
+    width: "100%",
+    height: 200,
+    resizeMode: "cover",
+    borderRadius: 15,
+    overflow: "hidden",
   },
 });
 

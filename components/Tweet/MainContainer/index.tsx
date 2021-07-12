@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Image } from "react-native";
 import { TweetType } from "../../../types";
 import { Entypo } from "@expo/vector-icons";
+import Footer from "./Footer";
 import styles from "./styles";
 
 export type MainContainerProps = {
@@ -9,25 +10,22 @@ export type MainContainerProps = {
 };
 
 const MainContainer = ({ tweet }: MainContainerProps) => (
-  <View>
+  <View style={styles.container}>
     <View style={styles.headerContainer}>
       <View style={styles.headerNames}>
         <Text style={styles.name}>{tweet.user.name}</Text>
         <Text style={styles.username}>@{tweet.user.username}</Text>
         <Text style={styles.createdAt}>15s</Text>
       </View>
-      <Entypo
-        style={styles.moreIcon}
-        name={"chevron-down"}
-        size={16}
-        color={"grey"}
-      />
+      <Entypo name={"chevron-down"} size={16} color={"grey"} />
     </View>
     <View>
-      <Text>{tweet.content}</Text>
-      {!tweet.image && <Image source={{ uri: tweet.image }} />}
+      <Text style={styles.content}>{tweet.content}</Text>
+      {!tweet.image && (
+        <Image style={styles.image} source={{ uri: tweet.image }} />
+      )}
     </View>
-    {/*  Tweet Footer  */}
+    <Footer tweet={tweet} />
   </View>
 );
 
