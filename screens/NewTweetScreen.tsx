@@ -38,12 +38,15 @@ export default function NewTweetScreen() {
             placeholder={"Share what's on your mind"}
             multiline={true}
             value={tweet}
-            onTextInput={(value) => setTweet(value)}
+            onChangeText={(value) => setTweet(value)}
             numberOfLines={3}
           />
           <TextInput
             style={styles.imageInput}
             placeholder={"Image URL optional"}
+            value={imageUrl}
+            onChangeText={(value) => setImageUrl(value)}
+            numberOfLines={3}
           />
         </View>
       </View>
