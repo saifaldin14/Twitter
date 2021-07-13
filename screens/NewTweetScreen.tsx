@@ -6,7 +6,7 @@ import { View } from "../components/Themed";
 import Feed from "../components/Feed";
 import NewTweetButton from "../components/NewTweetButton";
 
-export default function HomeScreen() {
+export default function NewTweetScreen() {
   return (
     <View style={styles.container}>
       <Feed />
