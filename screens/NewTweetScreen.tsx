@@ -1,5 +1,5 @@
+import React, { useEffect, useState } from "react";
 import { AntDesign } from "@expo/vector-icons";
-import * as React from "react";
 import {
   StyleSheet,
   TouchableOpacity,
@@ -12,6 +12,9 @@ import { View } from "../components/Themed";
 import Colors from "../constants/Colors";
 
 export default function NewTweetScreen() {
+  const [tweet, setTweet] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+
   const onPostTweet = () => {
     console.log("Hi");
   };
@@ -33,6 +36,10 @@ export default function NewTweetScreen() {
           <TextInput
             style={styles.tweetInput}
             placeholder={"Share what's on your mind"}
+            multiline={true}
+            value={tweet}
+            onTextInput={(value) => setTweet(value)}
+            numberOfLines={3}
           />
           <TextInput
             style={styles.imageInput}
