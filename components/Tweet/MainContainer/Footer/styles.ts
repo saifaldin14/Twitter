@@ -5,6 +5,9 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 10,
   },
+  number: {
+    color: "grey",
+  },
 });
 
 export default styles;
