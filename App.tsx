@@ -7,9 +7,11 @@ import { withAuthenticator } from "aws-amplify-react-native";
 import useCachedResources from "./hooks/useCachedResources";
 import useColorScheme from "./hooks/useColorScheme";
 import Navigation from "./navigation";
-import Amplify from "aws-amplify";
+import Amplify, { Auth } from "aws-amplify";
 import config from "./aws-exports";
+
 Amplify.configure(config);
+Auth.configure(config);
 
 function App() {
   const isLoadingComplete = useCachedResources();
