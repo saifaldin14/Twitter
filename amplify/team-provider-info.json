@@ -13,7 +13,8 @@
     },
     "categories": {
       "auth": {
-        "twitterfd8d87e8": {}
+        "twitterfd8d87e8": {},
+        "userPoolGroups": {}
       }
     }
   }
