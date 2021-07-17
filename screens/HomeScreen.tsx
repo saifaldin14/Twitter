@@ -1,8 +1,7 @@
 import * as React from "react";
 import { StyleSheet } from "react-native";
 
-import EditScreenInfo from "../components/EditScreenInfo";
-import { View } from "../components/Themed";
+import { Text, View } from "../components/Themed";
 import Feed from "../components/Feed";
 import NewTweetButton from "../components/NewTweetButton";
 
