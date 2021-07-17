@@ -1,10 +1,12 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
+import { S3Image } from "aws-amplify-react-native";
 import { TweetType } from "../../../types";
-import { Entypo } from "@expo/vector-icons";
-import Footer from "./Footer";
 import styles from "./styles";
+import { Entypo } from "@expo/vector-icons";
 import moment from "moment";
+
+import Footer from "./Footer";
 
 export type MainContainerProps = {
   tweet: TweetType;
@@ -24,9 +26,7 @@ const MainContainer = ({ tweet }: MainContainerProps) => (
     </View>
     <View>
       <Text style={styles.content}>{tweet.content}</Text>
-      {!tweet.image && (
-        <Image style={styles.image} source={{ uri: tweet.image }} />
-      )}
+      {!!tweet.image && <S3Image style={styles.image} imgKey={tweet.image} />}
     </View>
     <Footer tweet={tweet} />
   </View>
