@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     padding: 15,
     borderBottomWidth: 0.5,
-    borderBottomColor: "lightgrey",
+    borderColor: "lightgrey",
   },
 });
 
