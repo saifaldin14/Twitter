@@ -1,8 +1,3 @@
-/**
- * If you are not familiar with React Navigation, check out the "Fundamentals" guide:
- * https://reactnavigation.org/docs/getting-started
- *
- */
 import {
   NavigationContainer,
   DefaultTheme,
@@ -11,13 +6,16 @@ import {
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
 import { ColorSchemeName } from "react-native";
-import NewTweetScreen from "../screens/NewTweetScreen";
 
 import NotFoundScreen from "../screens/NotFoundScreen";
 import { RootStackParamList } from "../types";
 import BottomTabNavigator from "./BottomTabNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
+import NewTweetScreen from "../screens/NewTweetScreen";
+import Index from "../screens/FleetScreen";
 
+// If you are not familiar with React Navigation, we recommend going through the
+// "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
 export default function Navigation({
   colorScheme,
 }: {
@@ -42,6 +40,7 @@ function RootNavigator() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Root" component={BottomTabNavigator} />
       <Stack.Screen name="NewTweet" component={NewTweetScreen} />
+      <Stack.Screen name="Fleet" component={Index} />
       <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}
