@@ -131,7 +131,6 @@ export const listTweets = /* GraphQL */ `
             createdAt
             updatedAt
           }
-
         }
         createdAt
         updatedAt
