@@ -1,8 +1,10 @@
 import React from "react";
 import { View } from "react-native";
-import { TweetType } from "../../types";
 import LeftContainer from "./LeftContainer";
 import MainContainer from "./MainContainer";
+
+import { TweetType } from "../../types";
+
 import styles from "./styles";
 
 export type TweetProps = {
