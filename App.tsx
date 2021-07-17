@@ -23,6 +23,7 @@ function App() {
   };
 
   const saveUserToDB = async (user) => {
+    console.log(user);
     await API.graphql(graphqlOperation(createUser, { input: user }));
   };
 
@@ -38,6 +39,7 @@ function App() {
         const userData = await API.graphql(
           graphqlOperation(getUser, { id: userInfo.attributes.sub })
         );
+        console.log(userData);
         if (!userData.data.getUser) {
           const user = {
             id: userInfo.attributes.sub,
@@ -51,8 +53,9 @@ function App() {
           console.log("User already exists");
         }
       }
-    };
 
+      // If it doesn't, create the user in the database
+    };
     updateUser();
   }, []);
 
