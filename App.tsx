@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React, { useEffect } from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import Amplify, { Auth, API, graphqlOperation } from "aws-amplify";
-import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
+import { withAuthenticator } from "aws-amplify-react-native";
 
 import useCachedResources from "./hooks/useCachedResources";
 import useColorScheme from "./hooks/useColorScheme";
@@ -64,7 +64,6 @@ function App() {
   } else {
     return (
       <SafeAreaProvider>
-        <AmplifySignOut />
         <Navigation colorScheme={colorScheme} />
         <StatusBar />
       </SafeAreaProvider>
