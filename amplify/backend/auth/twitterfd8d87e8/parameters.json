@@ -45,14 +45,13 @@
             "Arn"
         ]
     },
-    "useDefault": "manual",
+    "useDefault": "default",
     "userPoolGroupList": [
         "TwitterGroup"
     ],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
     "dependsOn": [],
-    "thirdPartyAuth": false,
     "userPoolGroups": true,
     "adminQueries": false,
     "triggers": "{}",

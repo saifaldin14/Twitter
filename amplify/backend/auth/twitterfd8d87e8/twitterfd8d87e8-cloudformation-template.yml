@@ -130,10 +130,6 @@ Parameters:
     Type: CommaDelimitedList
       
   
-  thirdPartyAuth:
-    Type: String
-            
-  
   userPoolGroups:
     Type: String
             
@@ -149,7 +145,6 @@ Parameters:
   hostedUI:
     Type: String
             
-            
       
   parentStack:
     Type: String
@@ -162,6 +157,7 @@ Parameters:
   permissions:
     Type: CommaDelimitedList
       
+            
         
   authProviders:
     Type: CommaDelimitedList
@@ -404,6 +400,15 @@ Resources:
               Action:
                 - 'iam:PassRole'
               Resource: !If [ShouldNotCreateEnvResources, 'arn:aws:iam:::role/twittefd8d87e8_totp_lambda_role', !Join ['',['arn:aws:iam:::role/twittefd8d87e8_totp_lambda_role', '-', !Ref env]]]
+      - PolicyName: twittefd8d87e8_sns_pass_role_policy
+        PolicyDocument:
+          Version: 2012-10-17
+          Statement: 
+            - Effect: Allow
+              Action:
+                - 'iam:PassRole'
+              Resource: !GetAtt SNSRole.Arn
+    DependsOn: SNSRole
   MFALambda:
   # Lambda which sets MFA config values
   # Depends on MFALambdaRole for role ARN

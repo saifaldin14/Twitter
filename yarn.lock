@@ -132,7 +132,7 @@
     uuid "^3.2.1"
     zen-observable-ts "0.8.19"
 
-"@aws-amplify/storage@4.3.1":
+"@aws-amplify/storage@4.3.1", "@aws-amplify/storage@^4.3.1":
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/@aws-amplify/storage/-/storage-4.3.1.tgz#d39c2abf80aa31052243f947986c16702c0b15d2"
   integrity sha512-wrR5iIB8s7kxQcxUmKsTov9x+l/qYrg+nkDWh6SRFk8NZij6PEE5AX95WUdO4ZJobhPR+gkWdq0/5LUep2JREw==

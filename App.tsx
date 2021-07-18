@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useEffect } from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import Amplify, { Auth, API, graphqlOperation } from "aws-amplify";
+import Amplify, { Auth, API, graphqlOperation, Storage } from "aws-amplify";
 import { withAuthenticator } from "aws-amplify-react-native";
 
 import useCachedResources from "./hooks/useCachedResources";
@@ -16,6 +16,12 @@ Amplify.configure({
   ...config,
   Analytics: {
     disabled: true,
+  },
+  Storage: {
+    AWSS3: {
+      bucket: "twitter-storage", //REQUIRED -  Amazon S3 bucket name
+      region: "us-east-2", //OPTIONAL -  Amazon service region
+    },
   },
 });
 function App() {
