@@ -10,6 +10,7 @@ import {
 import { API, graphqlOperation, Auth, Storage } from "aws-amplify";
 import { useNavigation } from "@react-navigation/native";
 import * as Permissions from "expo-permissions";
+import * as Camera from "expo-camera";
 import * as ImagePicker from "expo-image-picker";
 import { v4 as uuidv4 } from "uuid";
 
@@ -27,7 +28,7 @@ export default function NewTweetScreen() {
 
   const getPermissionAsync = async () => {
     if (Platform.OS !== "web") {
-      const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+      const { status } = await Camera.requestPermissionsAsync();
       if (status !== "granted") {
         alert("Sorry, we need camera roll permissions to make this work!");
       }

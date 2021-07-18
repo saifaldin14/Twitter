@@ -12,8 +12,12 @@ import config from "./aws-exports";
 import { getUser } from "./src/graphql/queries";
 import { createUser } from "./src/graphql/mutations";
 
-Amplify.configure(config);
-
+Amplify.configure({
+  ...config,
+  Analytics: {
+    disabled: true,
+  },
+});
 function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
