@@ -47,7 +47,7 @@
     "@aws-amplify/api-graphql" "2.0.6"
     "@aws-amplify/api-rest" "2.0.6"
 
-"@aws-amplify/auth@4.1.2":
+"@aws-amplify/auth@4.1.2", "@aws-amplify/auth@^4.1.2":
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/@aws-amplify/auth/-/auth-4.1.2.tgz#6db75a4f8ce84675f5bb4a5dea889eb552706a77"
   integrity sha512-v1ndjOpVua3tt86E1x4Wi90Hp5pbWOVdyfu4IKyyIIWdbSLk9tcTfXLNpzUTrnZOIdo9OdmkOqTpT86ojxUPxA==
@@ -64,7 +64,7 @@
   dependencies:
     "@aws-amplify/core" "4.2.0"
 
-"@aws-amplify/core@4.2.0":
+"@aws-amplify/core@4.2.0", "@aws-amplify/core@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@aws-amplify/core/-/core-4.2.0.tgz#a2d536eb59ce758bf9c97f559e152b9ec56fafc4"
   integrity sha512-IWZrILTmxONWfOl/t2BejKiw1wQL4zEC5Kr2hLC0ViVQCK8MWscxE2VD0CNXkjcva5SshM9U61Tks4YKBdIi4A==
