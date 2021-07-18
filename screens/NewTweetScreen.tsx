@@ -13,6 +13,7 @@ import * as Permissions from "expo-permissions";
 import * as Camera from "expo-camera";
 import * as ImagePicker from "expo-image-picker";
 import { v4 as uuidv4 } from "uuid";
+import uuid from "react-native-uuid";
 
 import { Text, View } from "../components/Themed";
 import { AntDesign } from "@expo/vector-icons";
@@ -66,7 +67,7 @@ export default function NewTweetScreen() {
       const urlParts = imageUrl.split(".");
       const extension = urlParts[urlParts.length - 1];
 
-      const key = `${uuidv4()}.${extension}`;
+      const key = `${uuid.v4()}.${extension}`;
 
       await Storage.put(key, blob);
 
