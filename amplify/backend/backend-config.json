@@ -33,12 +33,18 @@
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 7,
-              "description": "Backend"
+              "description": ""
             }
           },
           "additionalAuthenticationProviders": []
         }
       }
+    }
+  },
+  "storage": {
+    "twitter": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
     }
   }
 }
