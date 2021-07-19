@@ -5,6 +5,7 @@ import { API, graphqlOperation } from "aws-amplify";
 import { listUsers } from "./queries";
 
 import UserFleetPreview from "../UserFleetPreview";
+import fleetsData from "../../data/usersWithFleets";
 
 const UserFleetsList = () => {
   const [users, setUsers] = useState([]);
@@ -24,7 +25,7 @@ const UserFleetsList = () => {
   return (
     <View>
       <FlatList
-        data={users}
+        data={fleetsData}
         renderItem={({ item }) => <UserFleetPreview user={item} />}
         horizontal
         showsHorizontalScrollIndicator={false}

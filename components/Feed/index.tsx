@@ -5,6 +5,7 @@ import { API, graphqlOperation } from "aws-amplify";
 import { listTweets } from "../../src/graphql/queries";
 import Tweet from "../Tweet";
 import UserFleetsList from "../UserFleetsList";
+import tweetsData from "../../data/tweets";
 
 const Feed = () => {
   const [tweets, setTweets] = useState([]);
@@ -29,7 +30,7 @@ const Feed = () => {
   return (
     <View style={{ width: "100%" }}>
       <FlatList
-        data={tweets}
+        data={tweetsData}
         renderItem={({ item }) => <Tweet tweet={item} />}
         keyExtractor={(item) => item.id}
         refreshing={loading}
