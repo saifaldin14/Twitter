@@ -7,6 +7,7 @@ import { API, graphqlOperation } from "aws-amplify";
 import { useRoute } from "@react-navigation/native";
 import { FleetType, UserType } from "../../types";
 import { listUsers } from "../../components/UserFleetsList/queries";
+import fleetsData from "../../data/usersWithFleets";
 
 const FleetScreen = () => {
   const route = useRoute();
@@ -85,7 +86,7 @@ const FleetScreen = () => {
 
   return (
     <FleetView
-      user={user}
+      user={fleetsData}
       fleet={fleet}
       goToNextFleet={goToNextFleet}
       goToPrevFleet={goToPrevFleet}

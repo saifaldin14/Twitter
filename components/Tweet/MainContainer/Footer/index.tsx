@@ -16,61 +16,61 @@ const Footer = ({ tweet }: FooterContainerProps) => {
 
   const [user, setUser] = useState(null);
   const [myLike, setMyLike] = useState(null);
-  const [likesCount, setLikesCount] = useState(tweet.likes.items.length);
+  //const [likesCount, setLikesCount] = useState(tweet.likes.items.length);
 
-  useEffect(() => {
-    const fetchUser = async () => {
-      const currentUser = await Auth.currentAuthenticatedUser();
-      setUser(currentUser);
+  // useEffect(() => {
+  //   const fetchUser = async () => {
+  //     const currentUser = await Auth.currentAuthenticatedUser();
+  //     setUser(currentUser);
 
-      const searchedLike = tweet.likes.items.find(
-        (like) => like.userID === currentUser.attributes.sub
-      );
-      setMyLike(searchedLike);
-    };
-    fetchUser();
-  }, []);
+  //     const searchedLike = tweet.likes.items.find(
+  //       (like) => like.userID === currentUser.attributes.sub
+  //     );
+  //     setMyLike(searchedLike);
+  //   };
+  //   fetchUser();
+  // }, []);
 
-  const submitLike = async () => {
-    const like = {
-      userID: user.attributes.sub,
-      tweetID: tweet.id,
-    };
+  // const submitLike = async () => {
+  //   const like = {
+  //     userID: user.attributes.sub,
+  //     tweetID: tweet.id,
+  //   };
 
-    try {
-      const res = await API.graphql(
-        graphqlOperation(createLike, { input: like })
-      );
-      setMyLike(res.data.createLike);
-      setLikesCount(likesCount + 1);
-    } catch (e) {
-      console.log(e);
-    }
-  };
+  //   try {
+  //     const res = await API.graphql(
+  //       graphqlOperation(createLike, { input: like })
+  //     );
+  //     setMyLike(res.data.createLike);
+  //     setLikesCount(likesCount + 1);
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // };
 
-  const removeLike = async () => {
-    try {
-      await API.graphql(
-        graphqlOperation(deleteLike, { input: { id: myLike.id } })
-      );
-      setLikesCount(likesCount - 1);
-      setMyLike(null);
-    } catch (e) {
-      console.log(e);
-    }
-  };
+  // const removeLike = async () => {
+  //   try {
+  //     await API.graphql(
+  //       graphqlOperation(deleteLike, { input: { id: myLike.id } })
+  //     );
+  //     setLikesCount(likesCount - 1);
+  //     setMyLike(null);
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // };
 
-  const onLike = async () => {
-    if (!user) {
-      return;
-    }
+  // const onLike = async () => {
+  //   if (!user) {
+  //     return;
+  //   }
 
-    if (!myLike) {
-      await submitLike();
-    } else {
-      await removeLike();
-    }
-  };
+  //   if (!myLike) {
+  //     await submitLike();
+  //   } else {
+  //     await removeLike();
+  //   }
+  // };
 
   return (
     <View style={styles.container}>
@@ -83,14 +83,14 @@ const Footer = ({ tweet }: FooterContainerProps) => {
         <Text style={styles.number}>{tweet.numberOfRetweets}</Text>
       </View>
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={onLike}>
+        <TouchableOpacity>
           <AntDesign
             name={!myLike ? "hearto" : "heart"}
             size={20}
             color={!myLike ? "grey" : "red"}
           />
         </TouchableOpacity>
-        <Text style={styles.number}>{likesCount}</Text>
+        <Text style={styles.number}>{tweet.numberOfLikes}</Text>
       </View>
       <View style={styles.iconContainer}>
         <EvilIcons name={"share-google"} size={28} color={"grey"} />
