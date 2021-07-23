@@ -2,8 +2,8 @@ const fleetsData = [
   {
     id: "0",
     image: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/10.png",
-    name: "Vadim Savin",
-    username: "Vadim",
+    name: "Saif Al-Din",
+    username: "Saif",
     createdAt: "2020-09-04T12:05:39.955Z",
     fleets: {
       items: [
@@ -25,8 +25,8 @@ const fleetsData = [
   {
     id: "1",
     image: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/7.png",
-    name: "Lukas",
-    username: "Lukas",
+    name: "John Doe",
+    username: "John",
     createdAt: "2020-09-04T12:05:39.955Z",
     fleets: {
       items: [
@@ -42,8 +42,8 @@ const fleetsData = [
   {
     id: "2",
     image: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/9.png",
-    name: "Daniil",
-    username: "Daniil",
+    name: "Jane Doe",
+    username: "Jane",
     createdAt: "2020-09-04T12:05:39.955Z",
     fleets: {
       items: [
@@ -58,8 +58,8 @@ const fleetsData = [
   {
     id: "3",
     image: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/6.png",
-    name: "Alex",
-    username: "Alexa",
+    name: "Siri Apple",
+    username: "Siri",
     createdAt: "2020-09-04T12:05:39.955Z",
     fleets: {
       items: [

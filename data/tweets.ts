@@ -3,8 +3,8 @@ const tweetsData = [
     id: "t1",
     user: {
       id: "u1",
-      username: "SavinVadim_",
-      name: "Vadim Savin",
+      username: "Saif",
+      name: "Saif Al-Din",
       image:
         "https://scontent.fkiv3-1.fna.fbcdn.net/v/t31.0-8/s960x960/22256588_1932617800312085_5686197942193420542_o.jpg?_nc_cat=110&_nc_sid=85a577&_nc_ohc=svjjE7DUkc0AX9yjcdC&_nc_ht=scontent.fkiv3-1.fna&tp=7&oh=1df4116c73c45a32ebad070704ca3333&oe=5F6ECD77",
     },
@@ -21,8 +21,8 @@ const tweetsData = [
     id: "t2",
     user: {
       id: "u1",
-      username: "SavinVadim_",
-      name: "Vadim Savin",
+      username: "Saif",
+      name: "Saif Al-Din",
       image:
         "https://scontent.fkiv3-1.fna.fbcdn.net/v/t31.0-8/s960x960/22256588_1932617800312085_5686197942193420542_o.jpg?_nc_cat=110&_nc_sid=85a577&_nc_ohc=svjjE7DUkc0AX9yjcdC&_nc_ht=scontent.fkiv3-1.fna&tp=7&oh=1df4116c73c45a32ebad070704ca3333&oe=5F6ECD77",
     },
@@ -37,8 +37,8 @@ const tweetsData = [
     id: "t3",
     user: {
       id: "u1",
-      username: "SavinVadim_",
-      name: "Vadim Savin",
+      username: "Saif",
+      name: "Saif Al-Din",
       image:
         "https://scontent.fkiv3-1.fna.fbcdn.net/v/t31.0-8/s960x960/22256588_1932617800312085_5686197942193420542_o.jpg?_nc_cat=110&_nc_sid=85a577&_nc_ohc=svjjE7DUkc0AX9yjcdC&_nc_ht=scontent.fkiv3-1.fna&tp=7&oh=1df4116c73c45a32ebad070704ca3333&oe=5F6ECD77",
     },
@@ -52,8 +52,8 @@ const tweetsData = [
     id: "t4",
     user: {
       id: "u1",
-      username: "SavinVadim_",
-      name: "Vadim Savin",
+      username: "Saif",
+      name: "Saif Al-Din",
       image:
         "https://scontent.fkiv3-1.fna.fbcdn.net/v/t31.0-8/s960x960/22256588_1932617800312085_5686197942193420542_o.jpg?_nc_cat=110&_nc_sid=85a577&_nc_ohc=svjjE7DUkc0AX9yjcdC&_nc_ht=scontent.fkiv3-1.fna&tp=7&oh=1df4116c73c45a32ebad070704ca3333&oe=5F6ECD77",
     },
